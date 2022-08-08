@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>แบบฟอร์มจองทัวร์</h1>
+    <form>
+        <fieldset>
+            <legend>ข้อมูลทั่วไป</legend>
+            <label>ชื่อ-สกุล : </label>
+            <br>
+            <input type="text" placeholder="กรอกชื่อ-สกุล" id="username" name="username" required>
+            <label>*</label>
+            <br>
+            <label>Email : </label>
+            <br>
+            <input type="text" required>
+            <label>*</label>
+            <br>
+            <label>โทรศัพท์ : </label>
+            <br>
+            <input type="text" placeholder="66+" required>
+            <label>*</label>
+            <br>
+            <label>ที่อยู่ : </label>
+            <br>
+            <textarea name="add" id="add" cols="30" rows="5"></textarea>
+            <br>
+            <label>รหัสไปรษณีย์ : </label>
+            <input type="text" size="5" pattern="[0-9]{5}" title="No match">
+            <br>
+            <label for="myfile">รูปผู้จอง : </label>
+            <input type="file" name="myfile">
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>ข้อมูลเข้าสู่ระบบ</legend>
+            <label>Username : </label>
+            <br>
+            <input type="text" pattern="[\w_]{8,}" title="No match"><br>
+            <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ ตั้งแต่ 8 ตัวขึ้นไป</i>
+            <br><br>
+            <label>Password : </label>
+            <br>
+            <input type="text" pattern="{8,}" title="No match"><br>
+            <i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i>
+
+        </fieldset>
+        <fieldset>
+            <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+            <label for="tour">แพคเกจทัวร์ : </label>
+            <select name="tour" id="tour">
+                <option>--- select ---</option>
+                <option value="">Japan</option>
+                <option value="">Korea</option>
+                <option value="">Switzerland</option>
+                <option value="">Singapore</option>
+                <option value="">Australia</option>
+            </select>
+            <br>
+            <label for="date">วันที่เดินทาง : </label>
+            <input type="date">
+            <br>
+            <label for="">จำนวนผู้เดินทาง : </label>
+            <input type="text" pattern="[1-10]">
+            <br>
+            <label for="">เน้นการท่องเที่ยวแบบใด : </label>
+            <br>
+            <input type="checkbox"><label for="">ชอปปิ้ง</label><br>
+            <input type="checkbox"><label for="">ธรรมชาติ</label><br>
+            <input type="checkbox"><label for="">ทะเล</label><br>
+        </fieldset>
+        <label for="c">ยอมรับเงื่อนไขและข้อตกลง</label>
+        <input type="radio" name="c" id="agree" checked><label for="agree">I agree</label>
+        <input type="radio" name="c" id="agree"><label for="disagree">I disagree</label>
+        <button>จอง</button>
+    </form>
+
+</body>
+
+</html>
